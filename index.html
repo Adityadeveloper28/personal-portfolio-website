@@ -13,19 +13,18 @@
 </head>
 
 <body>
-    <nav class="navbar" style="display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;">
-        <ul style=" display: flex;
-        list-style: none;
-        margin: 20px 0px;">
-            <li><a href="#home">home</a></li>
+    <nav class="navbar">
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About me</a></li>
-            <li><a href="#porfolio">Certificates</a></li>
-            <li><a href="#services">projects</a></li>
+            <li><a href="#portfolio">Certificates</a></li>
+            <li><a href="#services">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -36,23 +35,26 @@
         </div>
     </section>
     <section id="about">
-        <h1 class="headings" >ABOUT ME</h1>
+        <h1 class="headings">ABOUT ME</h1>
         <div class="pic" style="display:flex;">
             <div>
-            <img src="aditya.jpg" style=" align-items: left;
+                <img src="aditya.jpg" style=" align-items: left;
             width: 575px;
             height: 400px; object-fit:cover">
             </div>
-            <div id="intro" style="display: flex;flex-direction:column;">
+            <div class="intro" style="display: flex;flex-direction:column;">
                 <h2 style="font-size: 2rem;">ADITYA SINGH</h2>
-                <p style="font-size: 1.5rem;">I am a person who is positive about every aspect of life. There are many things I like to do, to see, and to experience. I like to read, I like to write; I like to think, I like to dream; I like to talk, I like to listen. I like to see the sunrise in the morning, I like to see the moonlight at night; I like to feel the music flowing on my face, I like to smell the wind coming from the ocean. I like to look at the clouds in the sky with a blank mind, I like to do thought experiment when I cannot sleep in the middle of the night.</p>
+                <p style="font-size: 1.5rem;">I am a person who is positive about every aspect of life. There are many
+                    things I like to do, to see, and to experience. I like to read, I like to write; I like to think, I
+                    like to dream; I like to talk, I like to listen. I like to see the sunrise in the morning, I like to
+                    see the moonlight at night; I like to feel the music flowing on my face, I like to smell the wind
+                    coming from the ocean. I like to look at the clouds in the sky with a blank mind, I like to do
+                    thought experiment when I cannot sleep in the middle of the night.</p>
             </div>
         </div>
     </section>
-    <section id="porfolio" style="color:cornsilk; display: flex;
-    flex-direction: column;
-">
-        <h1 class="headings">CERTIFICATES</h1>
+    <section id="portfolio" style="background-color: rgba(0, 0, 0, 0.9);">
+        <h1 class="headings" style="color: white;">CERTIFICATES</h1>
         <div class="gallery">
             <img srcset="img1.jpg" style=" width: 360px;
             height: 240px; 
@@ -80,7 +82,7 @@
         <h1 class="headings">PROJECT</h1>
         <div class="row">
             <div class="box" ">
-                <img src="pngwing.com.png" alt="" style="width: 80px;height:80px;background-color:white">
+                <img src=" pngwing.com.png" alt="" style="width: 80px;height:80px;background-color:white">
 
                 <h1 class="headings">python django </h1>
                 <p>Writing about yourself is one of the easy tasks. Everyone is different, and when you write about
@@ -97,7 +99,8 @@
                     writing the essay.</p>
             </div>
             <div class="box">
-                <img src="png-clipart-computer-programming-programming-language-c-programmer-language-miscellaneous-logo.png" alt="" style="width: 80px;height:80px;background-color:white">
+                <img src="png-clipart-computer-programming-programming-language-c-programmer-language-miscellaneous-logo.png"
+                    alt="" style="width: 80px;height:80px;background-color:white">
                 <h1 class="headings">c programming</h1>
                 <p>Writing about yourself is one of the easy tasks. Everyone is different, and when you write about
                     yourself,
@@ -169,5 +172,11 @@
         </form>
     </section>
 </body>
+<script>const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', function () {
+        menu.classList.toggle('active');
+    });</script>
 
 </html>
